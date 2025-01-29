@@ -1,0 +1,15 @@
+{
+	"id": "eef66d68-a9cb-4645-844f-176cf5371142",
+	"values": [
+		{
+			"key": "test_url",
+			"value": "Put your password here",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2025-01-01T14:32:44.964Z",
+	"_postman_exported_using": "Postman/11.23.3"
+}
