@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "16261fba-6c98-466a-b600-0b8f17377781",
+		"name": "JiraapiPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27599722"
+	},
+	"item": [
+		{
+			"name": "GetinstanceInfo",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.rcvacademy.com//rest/api/3/instance/licence",
+					"protocol": "https",
+					"host": [
+						"www",
+						"rcvacademy",
+						"com"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"3",
+						"instance",
+						"licence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProjects",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"validate the text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.maxResults).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.clear();\r",
+							"console.log(pm.globals.get(\"test_url\"))"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamqa91.atlassian.net/rest/api/2/project/search?maxResults=2",
+					"protocol": "https",
+					"host": [
+						"teamqa91",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					],
+					"query": [
+						{
+							"key": "maxResults",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProjects variables",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"validate the text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.maxResults).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.clear();\r",
+							"console.log(pm.globals.get(\"test_url\"))"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamqa91.atlassian.net/rest/api/2/project/search?maxResults=2",
+					"protocol": "https",
+					"host": [
+						"teamqa91",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					],
+					"query": [
+						{
+							"key": "maxResults",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProjects JS Operators",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"validate the text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.maxResults).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.clear();\r",
+							"console.log(pm.globals.get(\"test_url\"))"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamqa91.atlassian.net/rest/api/2/project/search?maxResults=2",
+					"protocol": "https",
+					"host": [
+						"teamqa91",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					],
+					"query": [
+						{
+							"key": "maxResults",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProjects JS Comp OPR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"validate the text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.maxResults).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.clear();\r",
+							"console.log(pm.globals.get(\"test_url\"))"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamqa91.atlassian.net/rest/api/2/project/search?maxResults=2",
+					"protocol": "https",
+					"host": [
+						"teamqa91",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					],
+					"query": [
+						{
+							"key": "maxResults",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProjects JS Function",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"validate the text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.maxResults).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.clear();\r",
+							"console.log(pm.globals.get(\"test_url\"))"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamqa91.atlassian.net/rest/api/2/project/search?maxResults=2",
+					"protocol": "https",
+					"host": [
+						"teamqa91",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					],
+					"query": [
+						{
+							"key": "maxResults",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all issues types",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://teamqa91-1736180827591.atlassian.net//rest/api/2/project/search",
+					"protocol": "https",
+					"host": [
+						"teamqa91-1736180827591",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "teamqa91@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "public-token-test-aa2760e4-0369-4d0c-9bfe-fd82171f35b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": {\r\n    \"assignee\": {\r\n      \"id\": \"5b109f2e9729b51b54dc274d\"\r\n    },\r\n    \"components\": [\r\n      {\r\n        \"id\": \"10000\"\r\n      }\r\n    ],\r\n    \"customfield_10000\": \"09/Jun/19\",\r\n    \"customfield_20000\": \"06/Jul/19 3:25 PM\",\r\n    \"customfield_30000\": [\r\n      \"10000\",\r\n      \"10002\"\r\n    ],\r\n    \"customfield_40000\": \"Occurs on all orders\",\r\n    \"customfield_50000\": \"Could impact day-to-day work.\",\r\n    \"customfield_60000\": \"jira-software-users\",\r\n    \"customfield_70000\": [\r\n      \"jira-administrators\",\r\n      \"jira-software-users\"\r\n    ],\r\n    \"customfield_80000\": {\r\n      \"value\": \"red\"\r\n    },\r\n    \"description\": \"Order entry fails when selecting supplier.\",\r\n    \"duedate\": \"2019-03-11\",\r\n    \"environment\": \"UAT\",\r\n    \"fixVersions\": [\r\n      {\r\n        \"id\": \"10001\"\r\n      }\r\n    ],\r\n    \"issuetype\": {\r\n      \"id\": \"10000\"\r\n    },\r\n    \"labels\": [\r\n      \"bugfix\",\r\n      \"blitz_test\"\r\n    ],\r\n    \"parent\": {\r\n      \"key\": \"PROJ-123\"\r\n    },\r\n    \"priority\": {\r\n      \"id\": \"20000\"\r\n    },\r\n    \"project\": {\r\n      \"id\": \"10000\"\r\n    },\r\n    \"reporter\": {\r\n      \"id\": \"5b10a2844c20165700ede21g\"\r\n    },\r\n    \"security\": {\r\n      \"id\": \"10000\"\r\n    },\r\n    \"summary\": \"Main order flow broken\",\r\n    \"timetracking\": {\r\n      \"originalEstimate\": \"10\",\r\n      \"remainingEstimate\": \"5\"\r\n    },\r\n    \"versions\": [\r\n      {\r\n        \"id\": \"10000\"\r\n      }\r\n    ]\r\n  },\r\n  \"update\": {\r\n    \"worklog\": [\r\n      {\r\n        \"add\": {\r\n          \"started\": \"2019-07-05T11:05:00.000+0000\",\r\n          \"timeSpent\": \"60m\"\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}'",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://teamqa91-1736180827591.atlassian.net//rest/api/2/project/search",
+					"protocol": "https",
+					"host": [
+						"teamqa91-1736180827591",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"",
+						"rest",
+						"api",
+						"2",
+						"project",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "jiratoken",
+			"value": "https://www.rcvacademy.com"
+		}
+	]
+}
